@@ -6,7 +6,8 @@ The RSautoWind was created for new app's and the app was created with Angular cl
 React
 The cli will install postcss, purgecss, tailwindcss, autoprefixer, and craco for react. craco (create react app configeration override) allows react to use postcss without much editing.
 
-- Ths cli was not tested for SCSS or SAAS in React.  You need to edit your index.js to point to tailwindcss file (/assets/main.css) 
+- Ths cli was not tested for SCSS or SAAS in React.  You might need to edit your index.js to point to tailwindcss file 
+(/assets/main.css) 
  
  
 Angular
