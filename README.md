@@ -1,11 +1,12 @@
+To run the cli type autowind
+
 The RSautoWind cli was created for my personal use.  I wanted an cli to copy my configuration files and install programs that allow tailwindcss and purgecss to work. This cli will work with React or Angular. This program will make a backup copy of the package.json file.
 The RSautoWind was created for new app's and the app was created with Angular cli or create-react-app.
 
-the program to run is autowind
-
 React
-The cli will install postcss, purgecss, tailwindcss, autoprefixer, and craco for react. craco (create react app configeration override) allows react to postcss without much editing.
-- If uses SaaS or SCSS you need to edit your index.js file and import /assets/main.css 
+The cli will install postcss, purgecss, tailwindcss, autoprefixer, and craco for react. craco (create react app configeration override) allows react to use postcss without much editing.
+
+- Ths cli was not tested for SCSS or SAAS in React.  You need to edit your index.js to point to tailwindcss file (/assets/main.css) 
  
  
 Angular
