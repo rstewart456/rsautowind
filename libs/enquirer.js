@@ -6,7 +6,7 @@ module.exports = {
             const question = await prompt({
             type: 'select',
             name: 'proceed',
-            message: 'Proceed with the installion',
+            message: 'Choose Yes or No',
             choices: ['yes', 'no']
             })
             return question

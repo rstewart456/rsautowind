@@ -7,11 +7,12 @@ const spawn = require('cross-spawn');
 module.exports = {
   react: async () => {
     try {
-      console.log(
-        'React scripts was detected\n' +
+      console.log(chalk.greenBright(
+        'React was detected.\n' +
         'It will copy and modify tailwindcss craco assets/index.css configuration files to your app\n' +
-        'It will install tailwindcss, craco, postcss, autoprefixer, and purgecss to your app'
-        )
+        'It will install tailwindcss, craco, postcss, autoprefixer, and purgecss to your app.\n' +
+        'Would You like to Proceed...'
+      ))
       const YesorNo = await enquirer.yesorno()
       if (YesorNo.proceed === "yes") {
       // Copy craco configuration file

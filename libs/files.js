@@ -18,6 +18,12 @@ module.exports = {
         const resolve = fs.realpathSync(path1)
         return resolve
     },
+    // Vue Configuration files location
+    vuePath: () => {
+        const path1 = __dirname + '/vue/'
+        const resolve = fs.realpathSync(path1)
+        return resolve
+    },
     // Check to see if you are in the main directory of package.json
     checkPackage: () => {
         const path = process.cwd()
@@ -29,13 +35,13 @@ module.exports = {
     checkFrameWork: async () => {
         const cupath = process.cwd()
         const frameWork = await fs.readFile(`${cupath}/package.json`, 'utf8')
-        const frame = frameWork.includes('react-scripts') || frameWork.includes('@angular/core') 
+        const frame = frameWork.includes('react-scripts') || frameWork.includes('@angular/core') || frameWork.includes('@vue/cli-service')
         return frame
     },
-    angularReact: async () => {
+    arv: async () => {
         const curpath = process.cwd()
         const file1 = await fs.readFile(`${curpath}/package.json`, 'utf8')
-        const file2 = file1.match(/@angular\/cli/) || file1.match(/react-scripts/)
+        const file2 = file1.match(/@angular\/cli/) || file1.match(/react-scripts/) || file1.match(/@vue\/cli-service/)
         const file3 = file2.toString()
         return file3
     }

@@ -7,9 +7,12 @@ const enquirer = require('../enquirer')
 module.exports = {
     angular: async () => {
         try {
-            console.log('This program will install ng-tailwindcss, tailwindcss, and purgecss\n' +
+            console.log(chalk.greenBright(
+                'Angular was detected.\n' + 
+                'This program will install ng-tailwindcss, tailwindcss, and purgecss\n' +
                 'It will make a backup copy of the package.json file.\n' +
-                'It will copy the ng-tailwindcss and tailwindcss configtuion files to your app')
+                'It will copy the ng-tailwindcss and tailwindcss configtuion files to your app.\n' +
+                'Would You like to Proceed...'))
             const YesorNo = await enquirer.yesorno();
             if (YesorNo.proceed === 'yes') {
                 // Copy Tailwindcss configuration file copy to the working directory
@@ -100,7 +103,7 @@ module.exports = {
                     });
                     cmd.on('close', (code) => {
                         console.log('Packages installed Sucessfully\n' +
-                            chalk.bgRed.bold('To Start the server type npm start and to build the app type npm run build'));
+                            chalk.redBright.bold('To Start the server type npm start and to build the app type npm run build'));
                     });
                 }
             } else if (YesorNo.proceed === 'no') {
