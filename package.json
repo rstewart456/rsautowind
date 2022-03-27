@@ -21,6 +21,6 @@
     "enquirer": "^2.3.5",
     "figlet": "^1.4.0",
     "fs-extra": "^9.0.0",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.6"
   }
 }
